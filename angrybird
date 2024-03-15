@@ -1,18 +1,26 @@
 #! /bin/bash
 
+#set -x
+
+# what to backup
 backup_files="/home/b2113451/new_pear"
 
+# where to backup to
 dest="/home/b2113451/backup_practice"
+
+# create archive filename
 
 day=$(date +%Y-%m-%d)
 echo $day
 
+#Backup the files using tar.
 tar -czvf $dest/backup.tar.gz $backup_files
 
+#print end status message
 echo
 echo "backup finished"
 date
 
+# Long listing of files in $dest to check file sizes
 ls -lh $dest/backup.tar.gz
-
 
