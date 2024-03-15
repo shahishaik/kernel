@@ -1,25 +1,17 @@
 #! /bin/bash
 
-
-
 backup_files="/home/b2113451/new_pear"
 
-
 dest="/home/b2113451/backup_practice"
-
-
 
 day=$(date +%Y-%m-%d)
 echo $day
 
-
 tar -czvf $dest/backup.tar.gz $backup_files
-
 
 echo
 echo "backup finished"
 date
-
 
 ls -lh $dest/backup.tar.gz
 
